@@ -37,25 +37,25 @@ topos = { 'mytopo': ( lambda: MyTopo() ) }
 ```
 After that we execute the command
 ```sh
-sudo mn --custom topo.py --topo mytopo
+> sudo mn --custom topo.py --topo mytopo
 ```
 to start a mininet session
 
 ### Question 1.2 
 we started a xterm session
 ```sh
-xterm h1 h2
+> xterm h1 h2
 ```
 Then, We first use HTTP to tranmit the wordle.txt file
 In the h1 node
  we enter
  ```sh
- python3 -m http.server 90&
+ > python3 -m http.server 90&
  ```
  to create a server
  and then we make h2 as a client by 
  ```sh
- wget --output-document=/home/josie/wordle.txt 128.197.128.9
+ > wget --output-document=/home/josie/wordle.txt 128.197.128.9
  ```
  to get the file
  In the report we can see that the speed is 1mb/s
